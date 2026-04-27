@@ -1,0 +1,15 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Launch Chrome against localhost",
+            "url": "http://localhost:5173",  // Correct Vite port
+            "webRoot": "${workspaceFolder}/src",  // Map to src folder for React
+            "sourceMapPathOverrides": {
+                "webpack:///src/*": "${webRoot}/*"  // Ensure source maps work with Vite
+            }
+        }
+    ]
+}
